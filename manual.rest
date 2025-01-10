@@ -1,0 +1,55 @@
+### REGISTER
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+    "name" : "test",
+    "email" : "test@example.com",
+    "password" : "Test@2003"
+}
+
+### LOGIN
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+    "email" : "test@example.com",
+    "password" : "Test@2003"
+}
+
+### CREATE TODO
+POST http://localhost:5000/api/todos
+Content-Type: application/json
+Authorization: Bearer <Token>
+
+{
+    "title" : "example",
+    "description" : "example@example.com",
+    "isCompleted" : true
+}
+
+### GET TODO
+GET http://localhost:5000/api/todos
+Content-Type: application/json
+Authorization: Bearer <Token>
+
+### GET TODO BY ID
+GET http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
+Content-Type: application/json
+Authorization: Bearer <Token>
+
+### UPDATE TODO
+PATCH http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
+Content-Type: application/json
+Authorization: Bearer <Token>
+
+{
+    "title" : "example updated",
+    "description" : "example@example.com updated",
+    "isCompleted" : false
+}
+
+### DELETE TODO
+DELETE http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
+Content-Type: application/json
+Authorization: Bearer <Token>
