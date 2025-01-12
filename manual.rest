@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
     "name" : "test",
-    "email" : "test@example.com",
+    "email" : "test@gmail.com",
     "password" : "Test@2003"
 }
 
@@ -13,35 +13,40 @@ POST http://localhost:5000/api/login
 Content-Type: application/json
 
 {
-    "email" : "test@example.com",
+    "email" : "test@gmail.com",
     "password" : "Test@2003"
 }
+
+### LOGOUT
+DELETE http://localhost:5000/api/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
 
 ### CREATE TODO
 POST http://localhost:5000/api/todos
 Content-Type: application/json
-Authorization: Bearer <Token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
 
 {
-    "title" : "example",
-    "description" : "example@example.com",
+    "title" : "test",
+    "description" : "test@test.com",
     "isCompleted" : true
 }
 
 ### GET TODO
 GET http://localhost:5000/api/todos
 Content-Type: application/json
-Authorization: Bearer <Token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
 
 ### GET TODO BY ID
 GET http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
 Content-Type: application/json
-Authorization: Bearer <Token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
 
 ### UPDATE TODO
 PATCH http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
 Content-Type: application/json
-Authorization: Bearer <Token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
 
 {
     "title" : "example updated",
@@ -52,4 +57,4 @@ Authorization: Bearer <Token>
 ### DELETE TODO
 DELETE http://localhost:5000/api/todos/c56c7483-ba55-4847-be34-f4802470123f
 Content-Type: application/json
-Authorization: Bearer <Token>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU1NWU3ZTQxLWZlMmItNDBlNS04NjI2LTBiMmMzMGM2NWE2MCIsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTczNjY1NDAxOSwiZXhwIjoxNzM2NzQwNDE5fQ.9E1lLwQXP_L63pXEXBLAzqZsi4jVN-QYCObVh7Px3G4
